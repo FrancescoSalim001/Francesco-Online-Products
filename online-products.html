@@ -8,7 +8,7 @@
     <title>Programming Products Store - By Francesco</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #007bff; /* Blue background */
@@ -20,6 +20,12 @@
             color: #fff;
             padding: 20px 0;
             text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
         }
 
         section {
@@ -27,21 +33,39 @@
             margin: 20px;
             background: #fff;
             color: #333; /* Dark text for readability */
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
         }
 
         .product {
             margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+
+        .product:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
         .product h3 {
             margin: 0;
+            font-size: 1.5em;
         }
 
         .price {
             color: #28a745;
             font-weight: bold;
+            font-size: 1.2em;
         }
 
         .purchase-button {
@@ -54,21 +78,23 @@
             text-decoration: none;
             display: inline-block;
             margin-top: 10px;
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.2s;
         }
 
         .purchase-button:hover {
             background: #0056b3;
+            transform: translateY(-2px);
         }
 
         footer {
             text-align: center;
-            padding: 10px 0;
+            padding: 15px 0;
             background: #333;
             color: #fff;
             position: relative;
             bottom: 0;
             width: 100%;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
         }
 
         p.note {
@@ -79,6 +105,21 @@
 
         .contact-email {
             color: #007bff; /* Link color */
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                margin: 10px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>
@@ -87,6 +128,8 @@
         <h1>Programming Products Store - By Francesco</h1>
     </header>
 
+<p class="note">Note: All payments will be used for my family members so if any purchases is very appreciated:)</p>
+    
     <section id="recommended-app">
         <h2>Recommended App - Visual Studio (FREE DOWNLOAD)</h2>
         <div>
@@ -187,9 +230,6 @@
         <h2>Contact My Team:</h2>
         <p>Email: <a href="mailto:maceciramvovuvacur@gmail.com" class="contact-email">maceciramvovuvacur@gmail.com</a></p>
     </section>
-
-    <p class="note">Note: Any payments will be double-checked by my team. If there is an underpayment when someone makes a purchase, the team will immediately contact you via email, WhatsApp, or phone call.</p>
-    
     <footer>
         <p>&copy; 2024 Programming Products Store. All Rights Reserved.</p>
     </footer>
