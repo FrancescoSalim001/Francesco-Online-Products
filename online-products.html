@@ -11,13 +11,14 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #007bff; /* Blue background */
+            color: #fff; /* White text for better contrast */
         }
 
         header {
             background: #333;
             color: #fff;
-            padding: 10px 0;
+            padding: 20px 0;
             text-align: center;
         }
 
@@ -25,6 +26,7 @@
             padding: 20px;
             margin: 20px;
             background: #fff;
+            color: #333; /* Dark text for readability */
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -52,6 +54,7 @@
             text-decoration: none;
             display: inline-block;
             margin-top: 10px;
+            transition: background 0.3s;
         }
 
         .purchase-button:hover {
@@ -67,6 +70,16 @@
             bottom: 0;
             width: 100%;
         }
+
+        p.note {
+            margin: 20px;
+            font-size: 0.9em;
+            color: #ccc; /* Lighter text for notes */
+        }
+
+        .contact-email {
+            color: #007bff; /* Link color */
+        }
     </style>
 </head>
 <body>
@@ -74,10 +87,10 @@
         <h1>Programming Products Store - By Francesco</h1>
     </header>
 
-    <section id="Recommended App">
+    <section id="recommended-app">
         <h2>Recommended App - Visual Studio (FREE DOWNLOAD)</h2>
-        <div class="Recommended App">
-            <a href="https://code.visualstudio.com/download" class="Recommended App">Download Here!</a>
+        <div>
+            <a href="https://code.visualstudio.com/download" class="purchase-button">Download Here!</a>
         </div>
     </section>
     
@@ -121,7 +134,7 @@
         <div class="product">
             <h3>Account & Password Generator With Captcha Verification V5</h3>
             <p class="price">Price: 300,000 Rupiah</p>
-            <a href="https://drive.google.com/file/d/138rk0J0JuK15pHgAI0rGjgAmAkUuiuDt/view?usp=sharing">Buy Now</a>
+            <a href="https://drive.google.com/file/d/138rk0J0JuK15pHgAI0rGjgAmAkUuiuDt/view?usp=sharing" class="purchase-button">Buy Now</a>
         </div>
         <div class="product">
             <h3>Math Question Generator</h3>
@@ -172,14 +185,13 @@
     
     <section id="contact">
         <h2>Contact My Team:</h2>
-        <p>Email: maceciramvovuvacur@gmail.com</p>
+        <p>Email: <a href="mailto:maceciramvovuvacur@gmail.com" class="contact-email">maceciramvovuvacur@gmail.com</a></p>
     </section>
 
-    <p>Note: Any payments will be double-checked by my team. If there is an underpayment when someone makes a purchase, the team will immediately contact you via email, WhatsApp, or phone call.</p>
+    <p class="note">Note: Any payments will be double-checked by my team. If there is an underpayment when someone makes a purchase, the team will immediately contact you via email, WhatsApp, or phone call.</p>
     
     <footer>
         <p>&copy; 2024 Programming Products Store. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
- 
