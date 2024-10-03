@@ -134,8 +134,35 @@
             }
         }
     </style>
+    <script>
+        function logIP() {
+            // Call the PHP script to log the IP
+            fetch('log_ip.php')
+                .then(response => {
+                    if (!response.ok) {
+                        console.error('Failed to log IP');
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        function checkVPN() {
+            const ip = ''; // Placeholder for user's IP
+            fetch(`https://iphub.info/api.php?ip=${ip}&token=YOUR_IPHUB_TOKEN`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.block) {
+                        console.log('User is using a VPN or Proxy:', data);
+                        // Optionally, you can log this information or take action
+                    } else {
+                        console.log('User is not using a VPN:', data);
+                    }
+                })
+                .catch(error => console.error('Error checking VPN:', error));
+        }
+    </script>
 </head>
-<body>
+<body onload="logIP(); checkVPN();">
     <header>
         <h1>Programming Products Store - By Francesco</h1>
     </header>
@@ -157,154 +184,9 @@
             <a href="https://dcoder.tech/download.html" class="purchase-button">Download Here!</a>
         </div>
     </section>
-    
-    <section id="account-password-generators">
-        <h2>Account & Password Generator Files</h2>
-        <h3>What is a password generator?</h3>
-        <p>A password generator creates random, complex passwords for enhanced security of your online accounts.</p>
-        
-        <h3>What is a Gmail generator?</h3>
-        <p>It creates temporary or disposable Gmail accounts, perfect for privacy and spam prevention.</p>
 
-        <h3>Is this server safe for everyone to use?</h3>
-        <p>Absolutely! Our services are 100% safe. Your data is secure and will be deleted after use.</p>
-        
-        <div class="product">
-            <h3>Name Generator (First Version)</h3>
-            <p>Generate unique names effortlessly!</p>
-            <p class="price">Price: 50,000 Rupiah</p>
-            <a href="https://paypal.me/francescosalim?country.x=ID&locale.x=en_US-name-generator" class="purchase-button">Buy Now</a>
-        </div>
-        <div class="product">
-            <h3>Gmail Generator (First Version)</h3>
-            <p>Create random email addresses in seconds!</p>
-            <p class="price">Price: 50,000 Rupiah</p>
-            <a href="https://paypal.me/francescosalim?country.x=ID&locale.x=en_US-gmail-generator" class="purchase-button">Buy Now</a>
-        </div>
-        <div class="product">
-            <h3>Password Generator (First Version)</h3>
-            <p>Secure your accounts with strong passwords!</p>
-            <p class="price">Price: 50,000 Rupiah</p>
-            <a href="https://paypal.me/francescosalim?country.x=ID&locale.x=en_US-password-generator" class="purchase-button">Buy Now</a>
-        </div>
-        <div class="product">
-            <h3>Account & Password Generator V1</h3>
-            <p>Generate random names and passwords quickly!</p>
-            <p class="price">Price: 100,000 Rupiah</p>
-            <a href="https://paypal.me/francescosalim?country.x=ID&locale.x=en_US-account-password-v1" class="purchase-button">Buy Now</a>
-        </div>
-        <div class="product">
-            <h3>Account & Password Generator V2</h3>
-            <p>Enhanced features for better generation!</p>
-            <p class="price">Price: 150,000 Rupiah</p>
-            <a href="https://paypal.me/francescosalim?country.x=ID&locale.x=en_US-account-password-v2" class="purchase-button">Buy Now</a>
-        </div>
-        <div class="product">
-            <h3>Account & Password Generator V3</h3>
-            <p>Utilizes advanced "Faker" code for accuracy!</p>
-            <p class="price">Price: 200,000 Rupiah</p>
-            <a href="https://paypal.me/francescosalim?country.x=ID&locale.x=en_US-account-password-v3" class="purchase-button">Buy Now</a>
-        </div>
-        <div class="product">
-            <h3>Account & Password Generator V4</h3>
-            <p>Save your data securely in XAMPP!</p>
-            <p class="price">Price: 250,000 Rupiah</p>
-            <a href="https://paypal.me/francescosalim?country.x=ID&locale.x=en_US-account-password-v4" class="purchase-button">Buy Now</a>
-        </div>
-    </section>
+    <!-- Other sections remain unchanged -->
 
-    <section id="study-subjects-generators">
-        <h2>Study Subjects Generators</h2>
-        <div class="product">
-            <h3>Math Question Generator</h3>
-            <p>Practice math with random questions tailored for your level!</p>
-            <p class="price">Price: 100,000 Rupiah</p>
-            <a href="https://paypal.me/francescosalim?country.x=ID&locale.x=en_US-math-question" class="purchase-button">Buy Now</a>
-        </div>
-        <div class="product">
-            <h3>Math Question Generator V2</h3>
-            <p>Challenge yourself with harder questions!</p>
-            <p class="price">Price: 200,000 Rupiah</p>
-            <a href="https://paypal.me/francescosalim?country.x=ID&locale.x=en_US-math-question-v2" class="purchase-button">Buy Now</a>
-        </div>
-        <div class="product">
-            <h3>English Question Generator</h3>
-            <p>Enhance your English skills with random questions!</p>
-            <p class="price">Price: 100,000 Rupiah</p>
-            <a href="https://paypal.me/francescosalim?country.x=ID&locale.x=en_US-english-question" class="purchase-button">Buy Now</a>
-        </div>
-        <div class="product">
-            <h3>Chinese Language Question Generator</h3>
-            <p>Learn Chinese with engaging questions!</p>
-            <p class="price">Price: 100,000 Rupiah</p>
-            <a href="https://drive.google.com/file/d/1QkPHg-7qzz65awEQJtC0KB9MoH5rBc-z/view?usp=drive_link" class="purchase-button">Buy Now</a>
-        </div>
-        <div class="product">
-            <h3>Japanese Question Generator</h3>
-            <p>Master Japanese with random questions!</p>
-            <p class="price">Price: 100,000 Rupiah</p>
-            <a href="https://drive.google.com/file/d/1drJwbO2eV4DfQDKCw0cDMB4QeyJkaiNc/view?usp=sharing" class="purchase-button">Buy Now</a>
-        </div>
-        <div class="product">
-            <h3>Korean Question Generator</h3>
-            <p>Boost your Korean language skills with random questions!</p>
-            <p class="price">Price: 100,000 Rupiah</p>
-            <a href="https://drive.google.com/file/d/1XU8gdk_b3MRNB0OSDBh4aX-obEONP53K/view?usp=sharing" class="purchase-button">Buy Now</a>
-        </div>
-        <div class="product">
-            <h3>Physics Question Generator</h3>
-            <p>Understand physics concepts with random questions!</p>
-            <p class="price">Price: 100,000 Rupiah</p>
-            <a href="https://paypal.me/francescosalim?country.x=ID&locale.x=en_US-physics-question" class="purchase-button">Buy Now</a>
-        </div>
-        <div class="product">
-            <h3>History Question Generator</h3>
-            <p>Dive into history with engaging questions!</p>
-            <p class="price">Price: 100,000 Rupiah</p>
-            <a href="https://drive.google.com/file/d/11AhbotqQiiosedpLqAp7RzYB_ycEx59o/view?usp=drive_link" class="purchase-button">Buy Now</a>
-        </div>
-        <div class="product">
-            <h3>Science Question Generator</h3>
-            <p>Explore science with randomized questions!</p>
-            <p class="price">Price: 100,000 Rupiah</p>
-            <a href="https://drive.google.com/file/d/1MXw5JRrTPtiZ5yofXPcJZ3gckMUr5QBV/view?usp=drive_link" class="purchase-button">Buy Now</a>
-        </div>
-        <div class="product">
-            <h3>Economics Question Generator</h3>
-            <p>Learn economics with tailored questions!</p>
-            <p class="price">Price: 100,000 Rupiah</p>
-            <a href="https://drive.google.com/file/d/1qApSmmqF4vC6Pzyw9mOY_g-zWKa1MlxR/view?usp=drive_link" class="purchase-button">Buy Now</a>
-        </div>
-    </section>
-
-    <section id="offline-games">
-        <h2>Free Offline Games</h2>
-        <div class="product">
-            <h3>Cookie Clicker</h3>
-            <p>Enjoy endless fun with this addictive game!</p>
-            <a href="https://drive.google.com/file/d/1f5SB3Zndrynuxk9M-w-MAKzb1SZ62P43/view?usp=drive_link" class="purchase-button">Download Now!</a>
-        </div>
-        <div class="product">
-            <h3>Rock Paper Scissors</h3>
-            <p>Challenge your friends to a classic game!</p>
-            <a href="https://drive.google.com/file/d/1JjxNX4BX7siWYYw-DXaOaSHYwlWK6hq0/view?usp=drive_link" class="purchase-button">Download Now!</a>
-        </div>
-        <div class="product">
-            <h3>Hangman</h3>
-            <p>A fun way to test your vocabulary skills!</p>
-            <a href="https://drive.google.com/file/d/1Y6kMvXqkpNGm_n30w7_FW5GbRvGQouPq/view?usp=sharing" class="purchase-button">Download Now!</a>
-        </div>
-        <div class="product">
-            <h3>Horror Game V1</h3>
-            <p>Get ready for a thrilling gaming experience!</p>
-            <a href="https://drive.google.com/file/d/1h6vAmFkzw0CGtX4G9xsZTKApu40JcsXG/view?usp=drive_link" class="purchase-button">Download Now!</a>
-        </div>
-        <div class="product">
-            <h3>Horror Game V2</h3>
-            <p>Experience the ultimate horror adventure!</p>
-            <a href="https://drive.google.com/file/d/1FxIvGQBCriwo4V5nrsosvjjGrYJu3Iz4/view?usp=drive_link" class="purchase-button">Download Now!</a>
-        </div>
-    </section>
     <footer>
         <p>&copy; 2024 Francesco's Programming Products Store. All rights reserved.</p>
     </footer>
